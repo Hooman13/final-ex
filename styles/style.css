@@ -11,6 +11,9 @@ h1, h2 {
 p {
     font-family: var(--text-font);
 }
+.w-100 {
+    width: 100%;
+}
 .banner {
     font-family: var(--title-font);
     position: relative;
@@ -19,6 +22,7 @@ p {
     background: url(/img/1.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 .app-bar {
     display: flex;
@@ -133,11 +137,12 @@ header .scroll i {
     text-align: center;
     width: 100%;
     max-width: 450px;
-    margin: 64px auto 0 auto;
+    margin:0 auto;
 }
 .exprience-page {
     border-top: 1px solid rgba(0, 0, 0, 0.15);
     background-color: #fafafa;
+    padding-top: 64px;
 }
 .exprience-page .ex-header p {
     color: var(--text-color);
@@ -168,6 +173,9 @@ header .scroll i {
 .exp-descriptions .box:last-child {
     margin-bottom: 64px;
 }
+section.managment {
+    padding-top: 64px;
+} 
 section.managment h1 {
     font-size: 2em;
     margin-bottom: 20px;
@@ -178,25 +186,33 @@ section.managment p {
     line-height: 1.5em;
     margin-bottom: 20px;
 }
-.background {
-    position: relative;
-}
-.overlay-2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20%;
-    top: 30%;
-    background-color: #65c0ba;
-    z-index: -1;
-    transform: rotate(-9deg);
-}
 .man-pic {
     margin: 0 auto 64px auto;
+    position: relative;
+    z-index: 2;
 }
 section.blog {
     background-color: var(--primary-color);
     padding-bottom: 64px;
+    padding-top: 150px;
+    margin-top: -200px;
+    position: relative;
+    overflow: hidden;
+
+}
+section.blog .blog-info {
+    padding-top: 64px;
+}
+section.blog::before {
+    content: '';
+    width: 120%;
+    height: 200px;
+    background-color: white;
+    /* z-index: 5; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-5deg) translateY(-65%);
 }
 section.blog h1 {
     font-size: 2em;
@@ -246,6 +262,9 @@ section.customers {
     background-color: #fafafa;
     padding-bottom: 64px;
 }
+section.customers .cus-info {
+    padding-top: 64px;
+}
 section.customers h1 {
     font-size: 2em;
     
@@ -271,6 +290,9 @@ section.customers .cus-pic .cus-name {
 }
 section.destination {
     margin-bottom: 64px;
+}
+section.destination .des-info {
+    padding-top: 64px;
 }
 section.destination h1 {
     font-size: 1em;
@@ -331,6 +353,10 @@ footer {
     background-color: #1a1a1a;
     color: #fafafa;
 }
+footer section.links {
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 footer section.links div {
     margin-top: 64px;
     font-size: 0.75em;
@@ -360,7 +386,7 @@ footer section.links .info h3, p {
     font-size: 1.5em;
 }
 footer section.copyright {
-    margin-top: 64px;
+    margin-top: 36px;
     text-align: center;
 }
 footer section.copyright p {
@@ -371,4 +397,24 @@ footer section.copyright i {
     font-size: 0.5em;
     padding: 1em;
     margin-bottom: 64px;
+}
+.salam {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.salam-input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    padding: 8px 5px;
+    font-size: 8px;
+    font-style: italic;
+}
+.salam-button {
+    width: 36px;
+    background-color: transparent;
+    border: 0;
 }
