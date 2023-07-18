@@ -14,7 +14,21 @@ p {
 .w-100 {
     width: 100%;
 }
-.banner {
+.pad-top {
+    padding-top: 64px;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.title {
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    margin:0 auto;
+}
+header.banner {
     font-family: var(--title-font);
     position: relative;
     width: 100vw;
@@ -24,18 +38,18 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
 }
-.app-bar {
+header.banner .app-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 72px;
 }
-.app-bar div, i {
+header.banner .app-bar div, i {
     color: var(--font-color);
     font-size: 1.5rem;
     z-index: 99;
 }
-.overlay {
+header.banner .overlay {
     position: absolute;
     left: 0;
     right: 0;
@@ -43,7 +57,7 @@ p {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.15);
 }
-.header-description {
+header.banner .header-description {
     color: var(--font-color);
     position: absolute;
     left: 50%;
@@ -52,19 +66,19 @@ p {
     text-align: center;
     z-index: 99; 
 }
-.header-description h1 {
+header.banner .header-description h1 {
     font-size: 3em;
     padding-bottom: 24px;
 }
-.header-description div {
+header.banner .header-description div {
     font-family: var(--text-font);
     font-size: 1em;
     padding-bottom: 48px;
 }
-.header-description div a {
+header.banner .header-description div a {
     color: rgba(215, 215, 215, 0.998);
 }
-.header-description button {
+header.banner .header-description button {
     width: 150px;
     height: 40px;
     font-family: var(--text-font);
@@ -76,7 +90,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
-header .scroll {
+header.banner .scroll {
     color: white;
     z-index: 99;
     position: absolute;
@@ -88,42 +102,37 @@ header .scroll {
     letter-spacing: 0.2em;
     padding-top: 2em;
 }
-header .scroll i {
+header.banner .scroll i {
     position: absolute;
     left: 50%;
     bottom: 70%;
     transform: translate(-50%);
     font-size: 2em;
 }
-.container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-.welcom-page {
+section.welcom-page {
     margin: 5% auto;
 }
-.welcom-page h1 {
+section.welcom-page h1 {
     margin-top: 30%;
 }
-.welcom-page p {
+section.welcom-page p {
     color: var(--text-color);
     margin-top: 5%;
     font-size: 0.5em;
     line-height: 2em;
 }
-.welcom-page .play-button {
+section.welcom-page .play-button {
     display: flex;
     align-items: baseline;
 }
-.welcom-page .play-button p {
+section.welcom-page .play-button p {
     color: var(--primary-color);
     font-size: 0.5em;
     text-transform: uppercase;
     font-weight: 1000;
     letter-spacing: 0.2em;
 }
-.welcom-page .play-button i {
+section.welcom-page .play-button i {
     margin-right: 1.5em;
     align-items: baseline;
     color: var(--primary-color);
@@ -131,51 +140,40 @@ header .scroll i {
     border: 0.5px solid  rgba(215, 215, 215, 0.998);
     border-radius: 100%;
     padding: 1.2em;
-    
 }
-.title {
-    text-align: center;
-    width: 100%;
-    max-width: 450px;
-    margin:0 auto;
-}
-.exprience-page {
+section.exprience-page {
     border-top: 1px solid rgba(0, 0, 0, 0.15);
     background-color: #fafafa;
-    padding-top: 64px;
 }
-.exprience-page .ex-header p {
+section.exprience-page .ex-header p {
     color: var(--text-color);
     margin-top: 10px;
     font-size: 0.75em;
     line-height: 1.5em;
 }
-.exp-descriptions .box {
+section.exprience-page .exp-descriptions .box {
     max-width: 170px;
     text-align: center;
     margin: 0 auto;
     padding-top: 2em;
     padding-bottom: 1em;
 }
-.exp-descriptions img {
+section.exprience-page .exp-descriptions img {
     height: 32px;
 }
-.exp-descriptions h2 {
+section.exprience-page .exp-descriptions h2 {
     font-size: 0.75em;
     padding-bottom: 0.75em;
 }
-.exp-descriptions p {
+section.exprience-page .exp-descriptions p {
     color: var(--text-color);
     font-size: 0.5em;
     line-height: 1.5em;
     text-align: center;
 }
-.exp-descriptions .box:last-child {
+section.exprience-page .exp-descriptions .box:last-child {
     margin-bottom: 64px;
 }
-section.managment {
-    padding-top: 64px;
-} 
 section.managment h1 {
     font-size: 2em;
     margin-bottom: 20px;
@@ -186,7 +184,7 @@ section.managment p {
     line-height: 1.5em;
     margin-bottom: 20px;
 }
-.man-pic {
+section.man-pic {
     margin: 0 auto 64px auto;
     position: relative;
     z-index: 2;
@@ -200,15 +198,11 @@ section.blog {
     overflow: hidden;
 
 }
-section.blog .blog-info {
-    padding-top: 64px;
-}
 section.blog::before {
     content: '';
     width: 120%;
     height: 200px;
     background-color: white;
-    /* z-index: 5; */
     position: absolute;
     top: 0;
     left: 0;
@@ -262,9 +256,6 @@ section.customers {
     background-color: #fafafa;
     padding-bottom: 64px;
 }
-section.customers .cus-info {
-    padding-top: 64px;
-}
 section.customers h1 {
     font-size: 2em;
     
@@ -290,9 +281,6 @@ section.customers .cus-pic .cus-name {
 }
 section.destination {
     margin-bottom: 64px;
-}
-section.destination .des-info {
-    padding-top: 64px;
 }
 section.destination h1 {
     font-size: 1em;
@@ -378,13 +366,6 @@ footer section.links .info h3, p {
     line-height: 3em;
     font-size: 0.65em;
 }
-.sign {
-    display: flex;
-    justify-content: space-between;
-}
-.sign i {
-    font-size: 1.5em;
-}
 footer section.copyright {
     margin-top: 36px;
     text-align: center;
@@ -398,13 +379,13 @@ footer section.copyright i {
     padding: 1em;
     margin-bottom: 64px;
 }
-.login {
+footer section.links .login {
     display: flex;
     align-items: center;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.login-input {
+footer section.links .login .login-input {
     width: 100%;
     background-color: transparent;
     outline: none;
@@ -413,7 +394,7 @@ footer section.copyright i {
     font-size: 8px;
     font-style: italic;
 }
-.login-button {
+footer section.links .login .login-button {
     width: 36px;
     background-color: transparent;
     border: 0;
