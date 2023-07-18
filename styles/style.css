@@ -398,13 +398,13 @@ footer section.copyright i {
     padding: 1em;
     margin-bottom: 64px;
 }
-.salam {
+.login {
     display: flex;
     align-items: center;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.salam-input {
+.login-input {
     width: 100%;
     background-color: transparent;
     outline: none;
@@ -413,7 +413,7 @@ footer section.copyright i {
     font-size: 8px;
     font-style: italic;
 }
-.salam-button {
+.login-button {
     width: 36px;
     background-color: transparent;
     border: 0;
